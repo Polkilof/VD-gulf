@@ -1,0 +1,92 @@
+// vars
+$fonts: '../fonts/';
+$images: '../images/';
+
+// fonts
+$FuturaDemiC: 'FuturaDemiC', sans-serif;
+$CodeProBold: 'CodeProBold', sans-serif;
+$DidactGothic: 'DidactGothic', sans-serif;
+$LeagueSpartan: 'LeagueSpartanBold', sans-serif;
+
+
+$grid-gutter-width: 36px;
+$grid-gutter-width-mobile: 10px;
+$container-large-desktop: (1200px + $grid-gutter-width);
+$screen-lg: 1250px;
+$desktop-md: $screen-lg;
+$tablet: 991px;
+$mobile: 767px;
+
+// font settings
+
+$font-family-base: $DidactGothic;
+$font-size-base: 16px;
+$line-height-base: 1.5;
+$font-size-h1: 50px;
+$font-size-h2: 64px;
+$font-size-h3: 28px;
+$font-size-h4: 24px;
+
+$paragraph-spacing: 0 0 15px;
+
+$hover-opacity: 0.8;
+$time-animation: 0.3s;
+
+
+// colors
+$white: #fff;
+$black: #000;
+$gray-light: #dde0e8;
+$gray-light-02: #bebebf;
+$gray-simple: #f2f3f5;
+$gray-simple-01: #f7f7f7;
+$gray: #444;
+$dark-gray: #333;
+$blue: #28336f;
+$blue-simple: #1332b7;
+$gray-blue: #1a1c28;
+$dark-blue: #293172;
+$bright-blue: #1d3071;
+$light-purple: #a6abbf;
+
+
+$gray-light-03: #9fa3b8;
+$gray-light-04: #ebeced;
+$gray-light-05: #a1a5b8;
+$gray-01: #e7e8ea;
+$blue-01: #37457d;
+$dark-blue-01: #020b3c;
+$black-blue: #37457d;
+$black-blue-01: #3f51b5;
+$red-light: #A52A2A;
+
+$base-color: $gray;
+$body-bg: $gray-simple;
+
+$link-color: $blue;
+
+$btn-color: $white;
+$btn-border-radius-base: 0;
+$btn-font-size: 20px;
+$btn-line-height: 24px;
+$btn-font-weight: 400;
+$btn-min-width: 175px;
+$btn-primary-color: $white;
+$btn-primary-bg: $blue;
+$btn-primary-border: $blue;
+$btn-danger-color: $white;
+$btn-danger-bg: $red-light;
+$btn-danger-border: $red-light;
+
+
+
+
+$btn-info-bg: $gray-blue;
+$btn-info-border: $gray-blue;
+
+
+
+
+
+$bootstrap-sass-asset-helper: false;
+$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/");

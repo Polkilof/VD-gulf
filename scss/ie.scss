@@ -1,0 +1,55 @@
+body{
+	min-width: 1240px;
+}
+#header{
+	min-width: 1240px;
+}
+.baner h2{
+	background: #00073f;
+}
+.baner .baner-descr .descr{
+	background: #8c8e9e;
+}
+.go-down{
+	z-index: 1000;
+}
+.slick-dots li button{
+	z-index: 1000;
+}
+.services .company-item a:after{
+	z-index: 1000;
+}
+.services .company-item a strong:after{
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+	height: 14px;
+	margin-top: 8px;
+}
+.slick-arrow{
+	font-size: 0;
+	line-height: 0;
+	z-index: 1000;
+	height: 46px;
+}
+.slick-prev{
+	background: url(../images/prev.png) no-repeat;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+}
+.slick-next{
+	background: url(../images/next.png) no-repeat;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+}
+.services .company-item a{
+	z-index: 10;
+}
+.slide-about .slick-arrow{height: 46px;}
+.slide-about .slick-prev{background: url(../images/prev-blue.png) no-repeat 50% 50%;}
+.slide-about .slick-next{background: url(../images/next-blue.png) no-repeat 50% 50%;}
+.news-item .news-block-descr p:after{height: 16px;}
+.products-section .products-item strong:after{
+	height: 14px;
+	width: 9px;
+	margin-top: 5px;
+}

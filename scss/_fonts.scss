@@ -1,0 +1,49 @@
+/* Fonts */
+@font-face {
+	font-family:'FuturaDemiC';
+	src: url('#{$fonts}FuturaDemiC.eot');
+	src: url('#{$fonts}FuturaDemiC.eot?#iefix') format('embedded-opentype'),
+		 url('#{$fonts}FuturaDemiC.woff') format('woff'),
+		 url('#{$fonts}FuturaDemiC.ttf') format('truetype'),
+		 url('#{$fonts}FuturaDemiC.svg#FuturaDemiC') format('svg');
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-00BB;
+}
+@font-face {
+	font-family:'CodeProBold';
+	src: url('#{$fonts}Code-Pro-Bold.eot');
+	src: url('#{$fonts}Code-Pro-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('#{$fonts}Code-Pro-Bold.woff') format('woff'),
+		 url('#{$fonts}Code-Pro-Bold.ttf') format('truetype'),
+		 url('#{$fonts}Code-Pro-Bold.svg#Code-Pro-Bold') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-00FE;
+}
+@font-face {
+	font-family:'DidactGothic';
+	src: url('#{$fonts}Didact Gothic.eot');
+	src: url('#{$fonts}Didact Gothic.eot?#iefix') format('embedded-opentype'),
+		url('#{$fonts}Didact Gothic.woff') format('woff'),
+		url('#{$fonts}Didact Gothic.ttf') format('ttf'),
+		url('#{$fonts}Didact Gothic.svg#Didact Gothic') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-03BC;
+}
+@font-face {
+	font-family:'LeagueSpartanBold';
+	src: url('#{$fonts}League Spartan Bold.eot');
+	src: url('#{$fonts}League Spartan Bold.eot?#iefix') format('embedded-opentype'),
+		 url('#{$fonts}League Spartan Bold.woff') format('woff'),
+		 url('#{$fonts}League Spartan Bold.ttf') format('truetype'),
+		 url('#{$fonts}League Spartan Bold.svg#League Spartan Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-00FE;
+}

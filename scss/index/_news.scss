@@ -1,0 +1,188 @@
+/* news */
+.news {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	padding: 50px 0 40px;
+	@include breakpoint(mobile){
+		padding: 30px 0 66px;
+	}
+	.heading{
+		padding: 0 0 200px;
+		@include breakpoint(mobile){
+			padding: 0 0 20px;
+		}
+	}
+	.btn-info{
+		@include breakpoint(mobile){
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+		}
+	}
+	.row{
+		> div{
+			position: static;
+			& + div{
+				padding-top: 25px;
+				page-break-inside: 25px;
+				@include breakpoint(tablet){
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+	.parallax img {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		max-width: 100%;
+		margin-left: -15%;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+		@include breakpoint(mobile){
+			transform: translateX(-50%) !important;
+		}
+	}
+}
+.news-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	> li + li{
+		margin-top: 50px;
+		@include breakpoint(tablet){margin-top: 30px;}
+	}
+}
+.news-block{
+	position: relative;
+	display: block;
+	font-family: $DidactGothic;
+	font-size: 18px;
+	line-height: 1.5;
+	letter-spacing: 2px;
+	text-align: justify;
+	color: $gray-light-03;
+	@include breakpoint(tablet){
+		font-size: 16px;
+		line-height: 1.2;
+		letter-spacing: 1px;
+	}
+	@include breakpoint(mobile){
+		letter-spacing: 0;
+		text-align: left;
+	}
+	&:hover .btn-link{color: $blue;}
+	.date{
+		position: absolute;
+		top: -5px;
+		left: 0;
+		@include breakpoint(mobile){
+			left: 9px;
+		}
+		b{
+			font-family: $CodeProBold;
+			font-size: 38px;
+			line-height: 40px;
+			color: $blue-simple;
+			display: block;
+			@include breakpoint(tablet){
+				font-size: 32px;
+				line-height: 34px;
+			}
+			@include breakpoint(mobile){
+				font-size: 26px;
+				line-height: 30px;
+			}
+		}
+		small{
+			display: block;
+			text-align: center;
+			font-family: $FuturaDemiC;
+			font-size: 20px;
+			line-height: 24px;
+			color: $black;
+			@include breakpoint(tablet){
+				font-size: 20px;
+				line-height: 34px;
+			}
+			@include breakpoint(mobile){
+				font-size: 16px;
+				line-height: 20px;
+			}
+		}
+	}
+	.news-img{
+		display: block;
+		padding-left: 58px;
+		img{
+			display: block;
+			max-width: 100%;
+		}
+		@include breakpoint(tablet){
+			padding-bottom: 20px;
+		}
+	}
+	&:hover h3{
+		color: $blue;
+	}
+	&:hover h3:after{
+		margin-left: 15px;
+		opacity: 1;
+		@include breakpoint(tablet){
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+	h3:after{
+		content: '';
+		width: 12px;
+		height: 16px;
+		display: inline-block;
+		vertical-align: top;
+		background: url(../images/steparrow_big.png) no-repeat 50% 50%;
+		-webkit-background-size: 10px auto;
+		background-size: 10px auto;
+		margin-top: 8px;
+		margin-left: 5px;
+		opacity: 0;
+		transition: $time-animation;
+	}
+	h3 a{
+		color: inherit;
+	}
+	p{
+		margin-bottom: 30px;
+	}
+	footer{
+		position: relative;
+		text-align: center;
+		&:before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: $gray-light-03;
+			height: 1px;
+			width: 100%;
+		}
+	}
+}
+.btn-link{
+	font-family: $FuturaDemiC;
+	color: #000;
+	font-size: 22px;
+	text-transform: uppercase;
+	&:hover{
+		text-decoration: none;
+		color: $blue;
+	}
+	@include breakpoint(tablet){
+		font-size: 18px;
+	}
+}

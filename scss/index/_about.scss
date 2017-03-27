@@ -1,0 +1,149 @@
+/* about */
+.about{
+	position: relative;
+	background: $gray-simple;
+	overflow: hidden;
+	z-index: 0;
+	padding-bottom: 90px;
+	@include breakpoint(tablet){
+		padding-bottom: 70px;
+	}
+	@include breakpoint(mobile){
+		padding-bottom: 30px;
+	}
+	&:before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 50%;
+		height: 100%;
+		background: $white;
+		z-index: -1;
+	}
+	&.type2{
+		padding-bottom: 70px;
+		@include breakpoint(tablet){
+			padding-bottom: 50px;
+			.pull-right{
+				float: none !important;
+			}
+		}
+		@include breakpoint(mobile){
+			padding-bottom: 30px;
+		}
+		h3{
+			text-transform: none;
+			margin: 0;
+		}
+	}
+}
+.slide-about{
+	@media screen and (max-width: 1400px){
+		padding: 0 30px;
+	}
+	.slide-item{
+		overflow: hidden;
+		.about-descr{
+			width: 40%;
+			font-family: $DidactGothic;
+			font-size: 17px;
+			color: $blue;
+			@include breakpoint(mobile){
+				width: 100%;
+				display: block;
+			}
+			span{
+				display: block;
+				font-family: $CodeProBold;
+				font-size: 112px;
+				color: $black;
+				margin-bottom: 16px;
+				@include breakpoint(tablet){
+					font-size: 90px;
+					line-height: 94px;
+				}
+				@include breakpoint(mobile){
+					font-size: 70px;
+					line-height: 74px;
+					margin-bottom: 8px;
+				}
+			}
+			p{
+				position: relative;
+				margin: 0;
+				padding: 16px;
+				letter-spacing: 0.8px;
+				&:before{
+					content: "";
+					width: 160px;
+					height: 2px;
+					background: $blue-simple;
+					border: none;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+		.tbl{
+			display: table;
+			width: 100%;
+			height: 430px;
+			@include breakpoint(tablet){
+				height: 260px;
+			}
+			@include breakpoint(mobile){
+				height: auto;
+				display: block;
+			}
+			.cell{
+				display: table-cell;
+				vertical-align: middle;
+				@include breakpoint(mobile){
+					display: block;
+					vertical-align: top;
+				}
+			}
+		}
+		.about-img{
+			width: 60%;
+			padding-left: 60px;
+			@include breakpoint(tablet){
+				padding-left: 20px;
+			}
+			@include breakpoint(mobile){
+				width: 100%;
+				display: block;
+				padding-left: 0;
+			}
+			img{
+				display: block;
+				max-width: 100%;
+			}
+		}
+	}
+	.slick-prev {
+		background: url(#{$images}prev-blue.svg) no-repeat 50% 50%;
+		background-size: 27px auto;
+		left: -40px;
+		@media screen and (max-width: 1400px){
+			left: -5px;
+		}
+		@include breakpoint(mobile){
+			left: -10px;
+		}
+	}
+	.slick-next {
+		background: url(#{$images}next-blue.svg) no-repeat 50% 50%;
+		background-size: 27px auto;
+		right: -40px;
+		@media screen and (max-width: 1400px){
+			right: -5px;
+		}
+		@include breakpoint(mobile){
+			right: -10px;
+		}
+	}
+}

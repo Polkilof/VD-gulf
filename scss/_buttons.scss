@@ -1,0 +1,192 @@
+.btn{
+	display: inline-block;
+	vertical-align: top;
+	border: 2px solid transparent;
+	text-align: center;
+	font-family: $FuturaDemiC;
+	font-size: $btn-font-size;
+	line-height: $btn-line-height;
+	min-width: $btn-min-width;
+	padding: 19px 15px;
+	color: $btn-color;
+	&.dropdown-toggle.focus,
+	&.active.focus,
+	&.active:focus,
+	&.active:hover,
+	&.focus:active,
+	&:active:focus,
+	&:active:hover,
+	&:focus,
+	&:active,
+	&:hover{
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	&-default.dropdown-toggle.focus,
+	&-default.active.focus,
+	&-default.active:focus,
+	&-default.active:hover,
+	&-default.focus:active,
+	&-default:active:focus,
+	&-default:active:hover,
+	&-default:focus,
+	&-default:active,
+	&-default:hover{
+		// color: $orange;
+	}
+	&-primary{
+		color: $btn-primary-color;
+		&.type2 {
+			background: $btn-primary-border;
+			color: $white;
+		}
+	}
+	&-primary.dropdown-toggle.focus,
+	&-primary.active.focus,
+	&-primary.active:focus,
+	&-primary.active:hover,
+	&-primary.focus:active,
+	&-primary:active:focus,
+	&-primary:active:hover,
+	&-primary:focus,
+	&-primary:active,
+	&-primary:hover{
+		color: $white;
+		&.type2 {
+			background-color: darken($btn-primary-border, 10%);
+			border-color: darken($btn-primary-border, 10%);
+		}
+	}
+}
+.btn-default{
+	padding: 17px 40px;
+	background: $white;
+	color: $bright-blue;
+	border: 1px solid $dark-blue;
+	&.dropdown-toggle.focus,
+	&.active.focus,
+	&.active:focus,
+	&.active:hover,
+	&.focus:active,
+	&:active:focus,
+	&:active:hover,
+	&:focus,
+	&:active,
+	&:hover{
+		background: $dark-blue;
+		color: $white;
+		border: 1px solid $dark-blue;
+	}
+}
+.btn-danger{
+	padding: 17px 15px;
+	border-width: 1px;
+	&.dropdown-toggle.focus,
+	&.active.focus,
+	&.active:focus,
+	&.active:hover,
+	&.focus:active,
+	&:active:focus,
+	&:active:hover,
+	&:focus,
+	&:active,
+	&:hover{
+		color: $white;
+		background: $black-blue-01;
+	}
+}
+.btn-black{
+	background: $black;
+	color: $white;
+	border: 1px solid $black;
+	&.dropdown-toggle.focus,
+	&.active.focus,
+	&.active:focus,
+	&.active:hover,
+	&.focus:active,
+	&:active:focus,
+	&:active:hover,
+	&:focus,
+	&:active,
+	&:hover{
+		border: 1px solid lighten($black, 20%);
+		color: $white;
+		background: lighten($black, 20%);
+	}
+}
+.btn-transparent{
+	background: none;
+	text-transform: uppercase;
+	border: 1px solid $bright-blue;
+	color: $blue;
+	&.dropdown-toggle.focus,
+	&.active.focus,
+	&.active:focus,
+	&.active:hover,
+	&.focus:active,
+	&:active:focus,
+	&:active:hover,
+	&:focus,
+	&:active,
+	&:hover{
+		color: $white;
+		background: $blue;
+		border-color: $blue;
+	}
+}
+.btn-lg{
+	min-width: 400px;
+	border-radius: 0;
+	@include breakpoint(mobile){
+		min-width: $btn-min-width;
+		font-size: 16px;
+	}
+}
+.btn-back{
+	position: relative;
+	padding: 19px 15px 19px 45px;
+	&:before{
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 18px;
+		margin-top: -7px;
+		width: 11px;
+		height: 14px;
+		background: url(#{$images}ico-arrow-blue-back.png) 50% 50% no-repeat;
+		background-size: cover;
+		-webkit-transition: ease $time-animation;
+		-o-transition: ease $time-animation;
+		transition: ease $time-animation;
+	}
+	&:focus:before,
+	&:active:before,
+	&:hover:before{
+		background: url(#{$images}ico-arrow-back.png) 50% 50% no-repeat;
+		background-size: cover;
+	}
+}
+.btn-downloading{
+	position: relative;
+	padding: 19px 15px 19px 58px;
+	&:before{
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 15px;
+		background: url(#{$images}ico-downloading.svg) 50% 50% no-repeat;
+		background-size: cover;
+		width: 30px;
+		height: 20px;
+		margin-top: -12px;
+		-webkit-transition: ease $time-animation;
+		-o-transition: ease $time-animation;
+		transition: ease $time-animation;
+	}
+	&:focus:before,
+	&:active:before,
+	&:hover:before{
+		background: url(#{$images}ico-downloading-hover.svg) 50% 50% no-repeat;
+		background-size: cover;
+	}
+}

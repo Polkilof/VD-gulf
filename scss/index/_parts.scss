@@ -1,0 +1,78 @@
+/* parts */
+.parts {
+	position: relative;
+	padding-bottom: 15px;
+	overflow: hidden;
+	.parallax img {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+		max-width: 100%;
+		margin-left: 45%;
+		@include breakpoint(mobile){
+			transform: translateX(-50%) !important;
+		}
+	}
+	.parts-block{
+		font-size: 0;
+		line-height: 0;
+	}
+	.parts-item{
+		font-size: 20px;
+		line-height: 24px;
+		color: $blue;
+		padding: 5px 0 25px;
+		@include breakpoint(mobile){
+			font-size: 18px;
+			padding-bottom: 10px;
+		}
+		a{
+			position: relative;
+			display: block;
+			.overflow{
+				height: 160px;
+				margin-bottom: 25px;
+				position: relative;
+				overflow: hidden;
+				@include breakpoint(mobile){
+					height: 150px;
+					margin-bottom: 15px;
+				}
+			}
+			&:hover .img{
+				-webkit-transform: scale(1.1) rotate(0.01deg);
+				-ms-transform: scale(1.1) rotate(0.01deg);
+				-o-transform: scale(1.1) rotate(0.01deg);
+				transform: scale(1.1) rotate(0.01deg);
+			}
+			.img{
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				-webkit-background-size: cover;
+				background-size: cover;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				-webkit-transition: transform ease $time-animation;
+				-o-transition: transform ease $time-animation;
+				transition: transform ease $time-animation;
+				img{
+					display: none;
+				}
+			}
+			strong{
+				font-weight: normal;
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+	}
+}
+/*and parts*/

@@ -1,0 +1,501 @@
+/* header */
+#header{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	background: $white;
+	z-index: 2000;
+	min-width: 320px;
+	@include breakpoint(tablet){
+		-webkit-transition: right $time-animation, left $time-animation;
+		-o-transition: right $time-animation, left $time-animation;
+		transition: right $time-animation, left $time-animation;
+	}
+	@include breakpoint(mobile){
+		> .row{
+			margin: 0;
+		}
+	}
+	.navbar-brand{
+		display: block;
+		font-weight: normal;
+		font-family: $LeagueSpartan;
+		font-size: 56px;
+		line-height: 60px;
+		background: $blue;
+		margin: 0;
+		padding: 0;
+		height: auto;
+		width: 440px;
+		height: 90px;
+		@media screen and (max-width: 1400px){
+			width: 300px;
+			font-size: 40px;
+			line-height: 50px;
+			height: 80px;
+		}
+		@include breakpoint(desktop-md) {
+			height: 60px;
+			width: 200px;
+			font-size: 30px;
+			line-height: 40px;
+		}
+		@include breakpoint(mobile){
+			width: 120px;
+			font-size: 16px;
+			line-height: 30px;
+			height: 50px;
+		}
+		a{
+			position: relative;
+			display: block;
+			color: $white;
+			padding: 20px 15px 10px 115px;
+			text-decoration: none;
+			-webkit-transition: none;
+			-o-transition: none;
+			transition: none;
+			height: 100%;
+			@include breakpoint(desktop-md) {
+				padding: 15px 15px 5px 61px;
+			}
+			@include breakpoint(mobile) {
+				padding: 14px 7px 5px 44px;
+			}
+		}
+		.img{
+			position: absolute;
+			top: 50%;
+			left: 15px;
+			display: block;
+			width: 60px;
+			height: 60px;
+			margin-top: -30px;
+			-webkit-transition: -webkit-transform 0.5s;
+			-moz-transition: -moz-transform 0.5s;
+			-ms-transition: -moz-transform 0.5s;
+			-o-transition: -o-transform 0.5s;
+			transition: transform 0.5s;
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			-o-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			@include breakpoint(desktop-md) {
+				width: 40px;
+				height: 40px;
+				margin-top: -20px;
+				left: 10px;
+			}
+			@include breakpoint(mobile){
+				width: 30px;
+				height: 30px;
+				margin-top: -15px;
+				left: 7px;
+			}
+			&:before,
+			&:after{
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				display: block;
+				-webkit-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				-o-backface-visibility: hidden;
+				backface-visibility: hidden;
+				border-radius: 50%;
+			}
+			&:before{
+				background: url(#{$images}logo.png);
+				background-size: cover;
+			}
+			&:after{
+				background: url(#{$images}logo.png);
+				background-size: cover;
+				-webkit-transform: rotateY(180deg);
+				-moz-transform: rotateY(180deg);
+				-ms-transform: rotateY(180deg);
+				-o-transform: rotateY(180deg);
+				transform: rotateY(180deg);
+			}
+		}
+		&:hover .img{
+			-webkit-transform: rotateY(180deg);
+			-moz-transform: rotateY(180deg);
+			-ms-transform: rotateY(180deg);
+			-o-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+		}
+	}
+	.cart{
+		float: right;
+		.dropdown{
+			float: right;
+			margin-left: 15px;
+			.btn-open{
+				display: block;
+				font-family: $FuturaDemiC;
+				font-size: 16px;
+				line-height: 20px;
+				text-transform: uppercase;
+				background: $blue;
+				color: $white;
+				padding: 35px 10px;
+				@media screen and (max-width: 1400px){
+					padding: 30px 10px;
+				}
+				@include breakpoint(desktop-md) {
+					font-size: 14px;
+					padding: 20px 10px;
+				}
+				@include breakpoint(mobile){
+					padding: 0 6px;
+					width: 50px;
+					text-align: center;
+					font-size: 0;
+					line-height: 0;
+					&:before{
+						content: "\e116";
+						font-family: 'Glyphicons Halflings';
+						font-size: 18px;
+						line-height: 50px;
+					}
+				}
+				&:hover{
+					background: $gray-simple;
+					color: $blue;
+				}
+			}
+		}
+		.footer-card{
+			border-top: 1px solid $gray-light-02;
+			.total{
+				display: block;
+				padding: 20px 0 0;
+				@include breakpoint(desktop-md) {
+					padding-top: 10px;
+				}
+				span{
+					display: block;
+					color: $bright-blue;
+					font-size: 40px;
+					line-height: 44px;
+					@include breakpoint(mobile) {
+						font-size: 30px;
+						line-height: 34px;
+					}
+				}
+			}
+			.btn{
+				border: none;
+				border-radius: 0;
+				margin-bottom: -20px;
+				padding: 44px 15px;
+				min-width: 0;
+				@include breakpoint(desktop-md) {
+					padding: 34px 15px;
+					margin-bottom: -10px;
+				}
+				@include breakpoint(mobile) {
+					padding: 28px 15px 25px;
+					margin-bottom: 0;
+				}
+				i{
+					vertical-align: top;
+				}
+			}
+		}
+	}
+	.open .dropdown-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	@include breakpoint(mobile) {
+		.dropdown{
+			position: static;
+		}
+	}
+	.dropdown-menu{
+		display: block !important;
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transition: opacity $time-animation, visibility $time-animation;
+		-o-transition: opacity $time-animation, visibility $time-animation;
+		transition: opacity $time-animation, visibility $time-animation;
+		width: 550px;
+		right: 0;
+		left: auto;
+		margin: 0;
+		border-radius: 0;
+		border: none;
+		background: $gray-simple;
+		padding: 20px;
+		font-family: $FuturaDemiC;
+		font-size: 17px;
+		color: $black;
+		@include breakpoint(desktop-md) {
+			padding-bottom: 10px;
+			width: 500px;
+		}
+		@include breakpoint(mobile) {
+			width: 100%;
+			font-size: 14px;
+		}
+		@include breakpoint(mobile) {
+			padding-bottom: 0;
+		}
+		img{
+			max-width: 100%;
+			vertical-align: top;
+		}
+		.overflow{
+			max-height: 300px;
+			overflow-y: auto;
+			@include breakpoint(mobile){
+				overflow-x: auto;
+				table{
+					min-width: 400px;
+					max-height: 250px;
+				}
+			}
+			@media screen and (max-height: 470px){
+				max-height: 90px;
+			}
+		}
+		table{
+			width: 100%;
+			table-layout: fixed;
+			tr+tr td{
+				border-top: 1px solid $gray-light-02;
+			}
+			td{
+				width: 20%;
+				padding: 5px;
+				@include breakpoint(mobile) {
+					width: 15%;
+				}
+			}
+			td + td{
+				width: 26.66666666666667%;
+				@include breakpoint(mobile) {
+					width: 28.33333333333333%;
+				}
+			}
+		}
+		.input-number{
+			width: 120px;
+		}
+		.btn-row{
+			margin: 0 -20px;
+		}
+	}
+}
+.btn-remove{
+	width: 40px;
+	height: 40px;
+	position: relative;
+	border-radius: 50%;
+	border: 2px solid $gray-light;
+	font-size: 0;
+	line-height: 0;
+	text-align: center;
+	display: block;
+	font-family: $DidactGothic;
+	margin: 0 auto;
+	&:hover{
+		border-color: darken($gray-light, 15%);
+	}
+	i{
+		top: 0;
+		vertical-align: top;
+		font-size: 16px;
+		line-height: 36px;
+	}
+}
+.input-number{
+	border: 1px solid $bright-blue;
+	color: $bright-blue;
+	width: 158px;
+	border-radius: 45px;
+	position: relative;
+	height: 44px;
+	overflow: hidden;
+	a{
+		position: absolute;
+		font-size: 0;
+		line-height: 0;
+		top: 0;
+		bottom: 0;
+		width: 40px;
+	}
+	.next{
+		right: 0;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			height: 4px;
+			width: 14px;
+			background: $bright-blue;
+			margin: -2px 0 0 -7px;
+			-webkit-transition: background $time-animation;
+			-o-transition: background $time-animation;
+			transition: background $time-animation;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			height: 14px;
+			width: 4px;
+			background: $bright-blue;
+			margin: -7px 0 0 -2px;
+			-webkit-transition: background $time-animation;
+			-o-transition: background $time-animation;
+			transition: background $time-animation;
+		}
+		&:hover:after,
+		&:hover:before{
+			background: lighten($bright-blue, 30%);
+		}
+	}
+	.prev{
+		left: 0;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			height: 4px;
+			width: 14px;
+			background: $bright-blue;
+			margin: -2px 0 0 -7px;
+			-webkit-transition: background $time-animation;
+			-o-transition: background $time-animation;
+			transition: background $time-animation;
+		}
+		&:hover:before{
+			background: lighten($bright-blue, 30%);
+		}
+	}
+	input{
+		font-size: 22px;
+		border-radius: 0;
+		border: none;
+		background: none;
+		-webkit-box-shadow: none !important;
+		box-shadow: none !important;
+		font-family: $FuturaDemiC;
+		display: block;
+		width: 100%;
+		text-align: center;
+		height: 100%;
+		padding: 6px 40px;
+		overflow: hidden;
+		-ms-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+	}
+}
+.open-menu{
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	width: 40px;
+	height: 40px;
+	border-color: transparent;
+	border-style: solid;
+	border-width: 10px 7px;
+	background: $bright-blue;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	float: right;
+	position: relative;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+	margin: 10px 10px 0;
+	display: none;
+	@include breakpoint(tablet){
+		display: block;
+	}
+	@include breakpoint(mobile){
+		margin-top: 5px;
+	}
+	&:after,
+	&:before{
+		content: '';
+		position: absolute;
+		top: 50%;
+		margin-top: -2px;
+		left: 0;
+		width: 100%;
+		height: 4px;
+		-webkit-transition: all .6s;
+		-o-transition: all .6s;
+		transition: all .6s;
+		background: $white;
+	}
+	&:before{margin-top: -6px;}
+	&:after{margin-top: 2px;}
+}
+.menu-opened .open-menu {
+	background-color: transparent;
+	-webkit-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+	&:after,
+	&:before {
+		margin-top: -2px;
+		background-color: $bright-blue;
+	}
+	&:before {
+		-webkit-transform: rotate(135deg);
+		-ms-transform: rotate(135deg);
+		-o-transform: rotate(135deg);
+		transform: rotate(135deg);
+	}
+	&:after {
+		-webkit-transform: rotate(-135deg);
+		-ms-transform: rotate(-135deg);
+		-o-transform: rotate(-135deg);
+		transform: rotate(-135deg);
+	}
+}
+.fader{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: $black;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity $time-animation, visibility $time-animation;
+	-o-transition: opacity $time-animation, visibility $time-animation;
+	transition: opacity $time-animation, visibility $time-animation;
+}
+.menu-opened{
+	overflow: hidden;
+	.fader{
+		opacity: .7;
+		visibility: visible;
+	}
+	#main-nav{
+		right: 0;
+	}
+	#wrapper{
+		margin: 0 280px 0 -280px;
+	}
+	#header{
+		right: 280px;
+		left: -280px;
+	}
+}
